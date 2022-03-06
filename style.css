@@ -1,0 +1,221 @@
+/* universal selected - lowest priority */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    color: #444444;
+
+    border-top: 10px solid #1098ad;
+    position: relative;
+}
+
+.main-header {
+    background-color: #f7f7f7;
+    padding: 20px 40px;
+    margin-bottom: 60px;
+}
+
+nav {
+    font-size: 18px;
+    text-align: center;
+}
+
+article {
+    margin-bottom: 60px;
+}
+
+.post-header {
+    margin-bottom: 40px;
+}
+
+aside {
+    background-color:#f7f7f7;
+    /* can simply use border for all 4 sides */
+    border-top: 5px solid #1098ad;
+    border-bottom: 5px solid #1098ad;
+    padding: 50px 0;
+    width: 500px;
+}
+
+h1, h2, h3 {
+        /* rgba - rgb representation of a color + alpha(transparency as 4th value) */
+    color: #1098ad;
+}
+
+h1 {
+    font-size: 26px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h2::after {
+    content:"TOP";
+    background-color: #ffe70e;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 10px;
+    position: absolute;
+    top: -15px;
+    right: -25px;
+}
+
+h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p {
+    font-size: 22px;
+    /* Space between the lines - default: 1 / 1.5 times the font size */
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+li {
+    /* font size - default 16px */
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+/* descendant selector - p inside of a footer (not recommended) */
+/* footer p {
+    font-size: 16px;
+} */
+
+/* article header p {
+    font-style: italic;
+} */
+
+#author {
+    font-style: italic;
+    font-size: 18px;
+}
+
+#copyright {
+    font-size: 16px;
+}
+
+.related-author {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.related {
+    list-style: none;
+}
+
+/* select the first child of all the li */
+/* li:first-child {
+    font-weight: bold;
+}
+
+li:last-child {
+    font-style: italic;
+} */
+
+/* select specific element inside the bracket(odd, even or a number) */
+/* li:nth-child(even) {
+    color:red;
+} */
+
+
+
+/* styling links */
+/* LVHA (lifecycle of a click) */
+a:link {
+color: #1098ad;
+text-decoration: none;
+}
+
+a:visited {
+    color: #1098ad;
+}
+
+a:hover {
+    color: orangered;
+    font-weight: bold;
+}
+
+a:active{
+    background-color: black;
+}
+
+.post-img {
+    /* 100% of the parent container (dynamically changes with the screen size) */
+    width: 100%;
+    /* auto - only needed when height is specified inline */
+    height: auto;
+}
+
+/* centering the whole body */
+.container {
+    width: 700px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto;
+    position: relative;
+}
+
+/* transforming inline element to a block element and vice versa (display: block/display: inline/display: inline-block) */
+nav a:link {
+    /* background-color: orangered;
+    margin: 20px;
+    padding: 20px;
+    display: block; */
+    display:inline-block;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+nav a:link:last-child {
+    margin-right: 0;
+}
+
+/* absolute positioning */
+button {
+    font-size: 22px;
+    padding: 20px;
+    cursor: pointer;
+
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+/* pseudo-elements */
+h1::first-letter {
+    font-style: normal;
+    margin-right: 5px;
+}
+
+/* first sibling of the h3 */
+/* h3 + p::first-line {
+    color: red;
+} */
