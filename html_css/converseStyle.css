@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.3;
+}
+
+.product {
+    border: 5px solid black;
+    width: 900px;
+    margin: 50px 50px;
+    position: relative;
+}
+
+.main-title {
+    background-color: #f7f7f7;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* img {
+    margin-bottom: 10px;
+} */
+
+.price {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.shipping {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 10px;
+}
+
+.sale {
+    background-color: #ec2f2f;
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 7px 15px;
+    display: inline-block;
+    position: absolute;
+    top: -17px;
+    left: -34px;
+}
+
+a:link {
+    font-size: larger;
+    color:black;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+}
+
+.details-title {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.details-list {
+    margin-left: 20px;
+}
+
+.details-list li {
+    margin-bottom: 10px
+}
+
+button {
+    font-size: larger;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-top: 5px solid black;
+}
+
+button:hover {
+    font-size: larger;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.colors {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.color {
+    background-color: black;
+    height: 22px;
+    width: 22px;
+    display: inline-block;
+}
+
+.color-blue {
+    background-color: blue;
+}
+
+.color-red {
+    background-color: red;
+}
+
+/* .image {
+    float: left;
+}
+
+.price-details {
+    float: left;
+    margin-left: 40px;
+    width: 240px;
+}
+
+.product-details {
+    float: left;
+    width: 240px;
+    margin-left: 40px;
+}
+
+.clearfix::after {
+    clear: both;
+    content: '';
+    display: block;
+} */
+
+/* FLEXBOX */
+
+/* .row {
+    display: flex;
+    gap: 30px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.price-details {
+    flex: 1;
+} */
+
+/* CSS Grid */
+
+.product {
+    display: grid;
+    grid-template-columns: 250px 1fr 1fr;
+    column-gap: 30px;
+}
+
+.main-title {
+    grid-column: 1 / -1;
+}
+
+button {
+    grid-column: 1 / -1;
+}
