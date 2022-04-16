@@ -23,12 +23,13 @@
     Tints: #fdf2e9
     Shades: #cf711f
     Accents:
-    Greys: #555 / #333 / #ddd
+    Greys: #555 / #333 / #ddd / #888
 
     SHADOWS:
 
     BORDER-RADIUS:
     Default: 9px
+    11px
 
     WHITESPACE/SPACING SYSTEM (px):
     2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
@@ -87,7 +88,6 @@ body {
 }
 
 /* /REUSABLE GRID SYSTEM */
-
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
@@ -162,7 +162,36 @@ body {
     box-shadow: inset 0 0 0 3px #fff;
 }
 
+.link:link,
+.link:visited {
+    display: inline-block;
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: all 0.3s;
+}
+
+.link:hover,
+.link:hover {
+    color: #cf711f;
+    /* cannot simply remove the border because it messes up the whole layout */
+    border-bottom: 1px solid transparent;
+}
+
 /* HELPER CLASS to add margin (good practice to use !important on helpers) */
 .margin-right-sm {
     margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+    margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+    text-align: center;
+}
+
+strong {
+    font-weight: 500;
 }
