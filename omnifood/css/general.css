@@ -23,7 +23,7 @@
     Tints: #fdf2e9
     Shades: #cf711f
     Accents:
-    Greys: #555 / #333 / #ddd / #888
+    Greys: #555 / #333 / #ddd / #888 / #6f6f6f
 
     SHADOWS:
 
@@ -69,7 +69,16 @@ body {
     display: grid;
     column-gap: 6.4rem;
     row-gap: 9.6rem;
+    margin-bottom: 9.6rem;
 }
+
+.grid:last-child {
+    margin-bottom: 0;
+}
+
+/* .grid:not(last-child) {
+    margin-bottom: 9.6rem;
+} */
 
 .grid-center-vertically {
     align-items: center;
@@ -177,6 +186,26 @@ body {
     color: #cf711f;
     /* cannot simply remove the border because it messes up the whole layout */
     border-bottom: 1px solid transparent;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.list-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #e67e22;
 }
 
 /* HELPER CLASS to add margin (good practice to use !important on helpers) */
