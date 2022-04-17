@@ -20,12 +20,10 @@
 
     COLORS:
     Primary: #e67e22
-    Tints: #fdf2e9
-    Shades: #cf711f
+    Tints: #fdf2e9 / #eb984e
+    Shades: #cf711f / #45260a
     Accents:
-    Greys: #555 / #333 / #ddd / #888 / #6f6f6f
-
-    SHADOWS:
+    Greys: #555 / #333 / #ddd / #777 / #888 / #6f6f6f / #767676
 
     BORDER-RADIUS:
     Default: 9px
@@ -96,6 +94,10 @@ body {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.grid-5-cols {
+    grid-template-columns: repeat(5, 1fr);
+}
+
 /* /REUSABLE GRID SYSTEM */
 .heading-primary,
 .heading-secondary,
@@ -132,15 +134,20 @@ body {
     margin-bottom: 1.6rem;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
     display: inline-block;
+    text-decoration: none;
     font-size: 2rem;
     font-weight: 600;
-    color: #fff;
     padding: 1.6rem 3.2rem;
     border-radius: 9px;
-    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+
+
     /* ANIMATION to switch between colors, always on the original state*/
     /* 1st prop = which elements to animate, 2nd = how long, 3rd = type */
     transition: all 0.3s;
@@ -181,6 +188,19 @@ body {
     transition: all 0.3s;
 }
 
+.btn-form {
+    background-color: #45260a;
+    color: #fdf2e9;
+    align-self: flex-end;
+    padding: 1.2rem;
+}
+
+.btn-form:hover {
+    background-color: #fff;
+    color: #555;
+}
+
+
 .link:hover,
 .link:hover {
     color: #cf711f;
@@ -206,6 +226,13 @@ body {
     width: 3rem;
     height: 3rem;
     color: #e67e22;
+}
+
+*:focus {
+    outline: none;
+    /* outline: 4px dotted; */
+    /* outline-offset: 8px; */
+    box-shadow: 0 0 0 0.8rem #555;
 }
 
 /* HELPER CLASS to add margin (good practice to use !important on helpers) */
